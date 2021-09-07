@@ -1,28 +1,105 @@
-.App {
-  text-align: center;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Cambria, Monaco, Calibri, Candara, Times, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+  /* border: 1px solid blue; */  
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.App {
+  text-align: center;
+  display: grid;
+  grid-template-rows: 20vh 10vh 70vh;
+  /* row-gap: 10px; */
+
+  align-content: center;
+
+  grid-template-areas: 
+                      "header"
+                      "navigation"
+                      "content";
+
+  /* border: 2px solid blue; */
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+  grid-area: header;
+
+  background-color: #434343;
   color: white;
+  
+  /* border: 2px solid green; */
 }
 
-.App-title {
-  font-size: 1.5em;
+.App-navigation {
+  grid-area: navigation;
+
+  margin : auto 0;
+
+  padding: 10px 20px;
+
+  background-color: #222;
+  color: white;
+
+  /* border: 2px solid orange; */
 }
 
-.App-intro {
-  font-size: large;
+.App-content {
+  grid-area: content;
+
+  background-color: #242526;
+  color: #fff;
+
+  /* border: 2px solid red;*/
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.Link {
+  margin: 10px;
+  padding: 6px 12px;
+
+  color: white;
+
+  text-decoration: none;
+  box-sizing: border-box;
+  border-radius: 6px;
+
+  /* border: 1px solid red; */
+}
+
+.Link:hover {
+  margin: 10px;
+  padding: 6px 12px;
+
+  color: green;
+  background-color: #aaa;
+
+  text-decoration: none;
+  box-sizing: border-box;
+
+  /* border: 1px solid yellow; */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /* padding: 0; */
+  margin: 6px 0;
+}
+
+.ContentData {
+  margin: 0 100px;
+  text-align: left;
+
+  /* border: 1px solid red; */
+}
+
+
+
+
+.ContentInside {
+  /* margin: 0 100px; */
+
+  margin-top: 20px;
+  text-align: left;
+
+  /* border: 1px solid red; */
 }

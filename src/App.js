@@ -8,33 +8,47 @@ import {
 	Link
 } from 'react-router-dom';
 
-import ContactPage from './ContactPage';
+import PersonalProfile 		from './personalprofile';
+import PersonalSkills 		from './personalskills';
+import ProfessionalSkills 	from './professionalskills';
+import WorkExperience 		from './workexperience';
+import Education 			from './education';
+import Contact 				from './contact';
 
-const HomePage = () => <h1>Home Page</h1>;
-//const ContactPage = () => <h1>Contact Page</h1>;
-const LocationPage = () => <h1>Location Page</h1>;
+// const HomePage = () => <h1>Home</h1>;
 
 class App extends Component {
   render() {
     return (
 			  <div className="App">
-				<header className="App-header">
-					<h1>React Router</h1>
-				</header>
+				  	<Router>
 
-				<Router>
-					<div style={ {color: 'red'} }>
-						<Link className="Link" to='/home'>Home</Link>						
-						<Link className="Link" to='/contact'>Contact</Link>
-						<Link className="Link" to='/location'>Location</Link>
+						<div className="App-header">
+							<h1>ASHLY THOMAS ABRAHAM</h1>
+							<h3>SOFTWARE ARCHITECT</h3>							
+						</div>
 
-						<Switch>
-							<Route path="/home" component={HomePage} />
-							<Route path="/contact" component={ContactPage} />
-							<Route path="/location" component={LocationPage} />
-						</Switch>
-					</div>
-				</Router>
+						<div className="App-navigation">
+							<Link className="Link" to='/personal'>Personal Profile</Link>
+							<Link className="Link" to='/personal-skills'>Personal Skills</Link>
+							<Link className="Link" to='/professional-skills'>Professional Skills</Link>
+							<Link className="Link" to='/work'>Work Experience</Link>
+							<Link className="Link" to='/education'>Educational History</Link>
+							<Link className="Link" to='/contact'>Contact Me</Link>							
+						</div>
+
+						<div className="App-content">
+							<Switch>
+								<Route path="/personal" component={PersonalProfile} />
+								<Route path="/personal-skills" component={PersonalSkills} />
+								<Route path="/professional-skills" component={ProfessionalSkills} />
+								<Route path="/work" component={WorkExperience} />
+								<Route path="/education" component={Education} />
+								<Route path="/contact" component={Contact} />
+							</Switch>
+						</div>
+
+					</Router>
 			  </div>
     );
   }
