@@ -45,7 +45,7 @@ class App extends Component {
 			var selectionClass = "Menu";
 			if(this.state.selectedMenu === eachItem.id) {
 				selectionClass = "SelectedMenu";
-				console.log("selection", this.state.selectedMenu);
+				// console.log("selection", this.state.selectedMenu);
 			}
 
 			return <Link key={index} id={eachItem.id} onClick={this.clickHandler.bind(this, eachItem.id)} className={selectionClass} to={eachItem.route}>{eachItem.name}</Link>
@@ -53,7 +53,7 @@ class App extends Component {
 	}
 
 	render() {
-		console.log("RENDER", this.state.selectedMenu);
+		console.log("RENDER", process.env.PUBLIC_URL);
 
 		return (
 				<div className="App">
@@ -72,12 +72,13 @@ class App extends Component {
 
 							<div className="App-content">
 								<Switch>
-									<Route path="/personal" component={PersonalProfile} />
-									<Route path="/personal_skills" component={PersonalSkills} />
-									<Route path="/professional_skills" component={ProfessionalSkills} />
-									<Route path="/work_experience" component={WorkExperience} />
-									<Route path="/education" component={Education} />
-									<Route path="/contact" component={Contact} />
+									<Route path={process.env.PUBLIC_URL + "/"} component={PersonalProfile} />
+									<Route path={process.env.PUBLIC_URL + "/personal"} component={PersonalProfile} />
+									<Route path={process.env.PUBLIC_URL + "/personal_skills"} component={PersonalSkills} />
+									<Route path={process.env.PUBLIC_URL + "/professional_skills"} component={ProfessionalSkills} />
+									<Route path={process.env.PUBLIC_URL + "/work_experience"} component={WorkExperience} />
+									<Route path={process.env.PUBLIC_URL + "/education"} component={Education} />
+									<Route path={process.env.PUBLIC_URL + "/contact"} component={Contact} />
 								</Switch>
 							</div>
 
