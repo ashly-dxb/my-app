@@ -18,40 +18,73 @@ import Contact 				from './contact';
 // const HomePage = () => <h1>Home</h1>;
 
 class App extends Component {
-  render() {
-    return (
-			  <div className="App">
-				  	<Router>
 
-						<div className="App-header">
-							<h1>ASHLY THOMAS ABRAHAM</h1>
-							<h3>SOFTWARE ARCHITECT</h3>							
-						</div>
+	constructor() {
+		super();
+		this.state = {
+			selectedMenu : 'personal_profile'
+		};
 
-						<div className="App-navigation">
-							<Link className="Link" to='/personal'>Personal Profile</Link>
-							<Link className="Link" to='/personal-skills'>Personal Skills</Link>
-							<Link className="Link" to='/professional-skills'>Professional Skills</Link>
-							<Link className="Link" to='/work'>Work Experience</Link>
-							<Link className="Link" to='/education'>Educational History</Link>
-							<Link className="Link" to='/contact'>Contact Me</Link>							
-						</div>
+		this.menuItems = [
+			{id: "personal_profile", name: "Personal Profile", route: "/personal"},
+			{id: "personal_skills", name: "Personal Skills", route: "/personal_skills"},
+			{id: "professional_skills", name: "Professional Skills", route: "/professional_skills" },
+			{id: "work_experience", name: "Work Experience", route: "/work_experience"},
+			{id: "education", name: "Educational History", route: "/education"},
+			{id: "contact", name: "Contact Me", route: "/contact"}
+		];
+	}
 
-						<div className="App-content">
-							<Switch>
-								<Route path="/personal" component={PersonalProfile} />
-								<Route path="/personal-skills" component={PersonalSkills} />
-								<Route path="/professional-skills" component={ProfessionalSkills} />
-								<Route path="/work" component={WorkExperience} />
-								<Route path="/education" component={Education} />
-								<Route path="/contact" component={Contact} />
-							</Switch>
-						</div>
+	clickHandler(selectedItem) {
+		this.setState({selectedMenu: selectedItem});
+	}
 
-					</Router>
-			  </div>
-    );
-  }
+	getMenuLinks() {
+		return this.menuItems.map((eachItem, index) => {
+
+			var selectionClass = "Menu";
+			if(this.state.selectedMenu === eachItem.id) {
+				selectionClass = "SelectedMenu";
+				console.log("selection", this.state.selectedMenu);
+			}
+
+			return <Link key={index} id={eachItem.id} onClick={this.clickHandler.bind(this, eachItem.id)} className={selectionClass} to={eachItem.route}>{eachItem.name}</Link>
+		});
+	}
+
+	render() {
+		console.log("RENDER", this.state.selectedMenu);
+
+		return (
+				<div className="App">
+						<Router>
+
+							<div className="App-header">
+								<h1>ASHLY THOMAS ABRAHAM</h1>
+								<h3>SOFTWARE ARCHITECT</h3>							
+							</div>
+
+							<div className="App-navigation">
+								{
+									this.getMenuLinks()
+								}							
+							</div>
+
+							<div className="App-content">
+								<Switch>
+									<Route path="/personal" component={PersonalProfile} />
+									<Route path="/personal_skills" component={PersonalSkills} />
+									<Route path="/professional_skills" component={ProfessionalSkills} />
+									<Route path="/work_experience" component={WorkExperience} />
+									<Route path="/education" component={Education} />
+									<Route path="/contact" component={Contact} />
+								</Switch>
+							</div>
+
+						</Router>
+				</div>
+		);
+	}
 }
 
 export default App;

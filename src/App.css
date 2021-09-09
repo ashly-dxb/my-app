@@ -2,7 +2,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: Verdana, Cambria, Monaco, Calibri, Candara, Times, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Calibri, Monaco, Calibri, Candara, Times, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 12px;
   /* border: 1px solid blue; */  
 }
@@ -54,7 +54,10 @@ html, body {
   /* border: 2px solid red;*/
 }
 
-.Link {
+
+
+
+.Menu {
   margin: 10px;
   padding: 6px 12px;
 
@@ -67,7 +70,19 @@ html, body {
   /* border: 1px solid red; */
 }
 
-.Link:hover {
+.SelectedMenu {
+  margin: 10px;
+  padding: 6px 12px;
+
+  color: black;
+  background-color: white;
+
+  text-decoration: none;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.Menu:hover {
   margin: 10px;
   padding: 6px 12px;
 
@@ -76,13 +91,15 @@ html, body {
 
   text-decoration: none;
   box-sizing: border-box;
-
-  /* border: 1px solid yellow; */
 }
 
 h1, h2, h3, h4, h5, h6 {
   /* padding: 0; */
   margin: 6px 0;
+}
+
+h4 {
+  margin-top: 20px;
 }
 
 .ContentData {
@@ -92,14 +109,39 @@ h1, h2, h3, h4, h5, h6 {
   /* border: 1px solid red; */
 }
 
-
-
-
 .ContentInside {
-  /* margin: 0 100px; */
-
   margin-top: 20px;
   text-align: left;
 
   /* border: 1px solid red; */
 }
+
+
+.row {
+  display: flex;
+  width: 450px;
+}
+
+.leftList {
+  flex: 40%;
+}
+
+.rightList {
+  flex: 60%;
+}
+
+/* a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: green;
+  text-decoration: none;
+}
+
+a:active {
+  color: red;
+  text-decoration: none;
+} */
+

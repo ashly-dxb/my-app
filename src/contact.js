@@ -5,11 +5,22 @@ class WorkExperience extends Component {
       return (
               <div className="ContentData">
                     <h4>Contact Me</h4>
-                    
+
                     <div className="ContentInside">
-                        <li>Mobile: +971-50 857 0803</li>
-                        <li>Email: ashlythomas@gmail.com</li>
-                        <li>LinkedIn: <a href="https://linkedin.com/in/ashly-thomas-abraham">https://linkedin.com/in/ashly-thomas-abraham</a></li>
+                        <div className="row">
+                          <div className="leftList">Mobile</div>
+                          <div className="rightList">+971-50 857 0803</div>
+                        </div>
+
+                        <div className="row">
+                          <div className="leftList">Email</div>
+                          <div className="rightList"><a href="mailto:ashlythomas@gmail.com">ashlythomas@gmail.com</a></div>
+                        </div>
+
+                        <div className="row">
+                          <div className="leftList">LinkedIn</div>
+                          <div className="rightList"><a href="https://linkedin.com/in/ashly-thomas-abraham">https://linkedin.com/in/ashly-thomas-abraham</a></div>
+                        </div>
                     </div>
               </div>
             );
