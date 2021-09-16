@@ -53,8 +53,8 @@ class App extends Component {
 	}
 
 	render() {
-		console.log("RENDER : ", process.env.PUBLIC_URL);
-		console.log("obj : ", process.env);
+		// console.log("RENDER : ", process.env.PUBLIC_URL);
+		console.log("env : ", process.env);
 
 		return (
 				<div className="App">
@@ -73,13 +73,13 @@ class App extends Component {
 
 							<div className="App-content">
 								<Switch>
-									<Route path={process.env.PUBLIC_URL + "/"} component={PersonalProfile} />
-									<Route path={process.env.PUBLIC_URL + "/personal"} component={PersonalProfile} />
-									<Route path={process.env.PUBLIC_URL + "/personal_skills"} component={PersonalSkills} />
-									<Route path={process.env.PUBLIC_URL + "/professional_skills"} component={ProfessionalSkills} />
-									<Route path={process.env.PUBLIC_URL + "/work_experience"} component={WorkExperience} />
-									<Route path={process.env.PUBLIC_URL + "/education"} component={Education} />
-									<Route path={process.env.PUBLIC_URL + "/contact"} component={Contact} />
+									<Route path={"/"} component={PersonalProfile} />
+									<Route path={"/personal"} component={PersonalProfile} />
+									<Route path={"/personal_skills"} component={PersonalSkills} />
+									<Route path={"/professional_skills"} component={ProfessionalSkills} />
+									<Route path={"/work_experience"} component={WorkExperience} />
+									<Route path={"/education"} component={Education} />
+									<Route path={"/contact"} component={Contact} />
 								</Switch>
 							</div>
 
