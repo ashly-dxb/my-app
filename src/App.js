@@ -53,7 +53,8 @@ class App extends Component {
 	}
 
 	render() {
-		console.log("RENDER", process.env.PUBLIC_URL);
+		console.log("RENDER : ", process.env.PUBLIC_URL);
+		console.log("obj : ", process.env);
 
 		return (
 				<div className="App">

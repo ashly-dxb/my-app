@@ -7,7 +7,7 @@ class PersonalProfile extends Component {
                 <h4>Personal Profile</h4>
 
                 <div className="ContentInside">
-                  I am a software architect with holistic knowledge of project life cycle and designs. I have 17+ years of working experience in Software Industry as a full stack developer. I am very passionate in responsive web designs and improving user experience. I am also experienced in coordinating with the product management and stake holders.
+                  I am a software architect with holistic knowledge of project architecture, project life cycle and designs. I have 17+ years of working experience in software industry as a full stack developer. I am very passionate in responsive web designs and user experience. Well experienced in coordinating with the product management and stake holders. I have very good analytical and trouble shooting skills.
                 </div>
             </div>
           );
