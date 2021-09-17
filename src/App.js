@@ -15,6 +15,9 @@ import WorkExperience 		from './workexperience';
 import Education 			from './education';
 import Contact 				from './contact';
 
+
+import myPhoto from "./photo.png"
+
 // const HomePage = () => <h1>Home</h1>;
 
 class App extends Component {
@@ -58,32 +61,37 @@ class App extends Component {
 
 		return (
 				<div className="App">
-						<Router>
+					<Router>
 
-							<div className="App-header">
+						<div className="App-header">
+
+							<div className="headerLeft"><img src={myPhoto} width="80" border="0" /></div>
+
+							<div className="headerRight">
 								<h1>ASHLY THOMAS ABRAHAM</h1>
-								<h3>SOFTWARE ARCHITECT</h3>							
-							</div>
+								<h3>SOFTWARE ARCHITECT</h3>
+							</div>						
+						</div>
 
-							<div className="App-navigation">
-								{
-									this.getMenuLinks()
-								}							
-							</div>
+						<div className="App-navigation">
+							{
+								this.getMenuLinks()
+							}
+						</div>
 
-							<div className="App-content">
-								<Switch>
-									<Route path={"/"} component={PersonalProfile} />
-									<Route path={"/personal"} component={PersonalProfile} />
-									<Route path={"/personal_skills"} component={PersonalSkills} />
-									<Route path={"/professional_skills"} component={ProfessionalSkills} />
-									<Route path={"/work_experience"} component={WorkExperience} />
-									<Route path={"/education"} component={Education} />
-									<Route path={"/contact"} component={Contact} />
-								</Switch>
-							</div>
+						<div className="App-content">
+							<Switch>
+								<Route exact path="/" component={PersonalProfile} />
+								<Route path="/personal" component={PersonalProfile} />
+								<Route path="/personal_skills" component={PersonalSkills} />
+								<Route path="/professional_skills" component={ProfessionalSkills} />
+								<Route path="/work_experience" component={WorkExperience} />
+								<Route path="/education" component={Education} />
+								<Route path="/contact" component={Contact} />
+							</Switch>
+						</div>
 
-						</Router>
+					</Router>
 				</div>
 		);
 	}
