@@ -16,7 +16,7 @@ import Education 			from './education';
 import Contact 				from './contact';
 
 
-import myPhoto from "./photo.png"
+import myPhoto from "./photo.png";
 
 // const HomePage = () => <h1>Home</h1>;
 
@@ -61,15 +61,15 @@ class App extends Component {
 
 		return (
 				<div className="App">
-					<Router>
+					<Router basename='/profile'>
 
 						<div className="App-header">
 
-							<div className="headerLeft"><img src={myPhoto} width="80" border="0" /></div>
+							<div className="headerLeft"><img src={myPhoto} width="100" border="0" alt="photo" /></div>
 
 							<div className="headerRight">
 								<h1>ASHLY THOMAS ABRAHAM</h1>
-								<h3>SOFTWARE ARCHITECT</h3>
+								<h3>Full Stack Developer</h3>
 							</div>						
 						</div>
 
