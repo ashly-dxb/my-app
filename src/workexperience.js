@@ -5,9 +5,9 @@ class WorkExperience extends Component {
       return (
               <div className="ContentData">
 
-                    <h4>Work Experience</h4>
+                    <h3>Work Experience</h3>
 
-                    <h5>Software Architect</h5>
+                    <h5>Full Stack Developer</h5>
                     <h5>Lisec Automation Middle East FZ LLC  | May 2004 - Sep 2021</h5>
                     <div className="ContentInside">
                         <li>Conduct day-to-day work coordination with team members and project management.</li>

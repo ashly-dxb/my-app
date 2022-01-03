@@ -4,7 +4,7 @@ class Education extends Component {
     render() {
       return (
         <div className="ContentData">
-            <h4>Educational History</h4>
+            <h3>Educational History</h3>
             
             <div className="ContentInside">
                 <h5>Mahatma Gandhi University, Kottayam</h5>

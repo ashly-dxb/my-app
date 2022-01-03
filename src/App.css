@@ -2,8 +2,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: Candara, Monaco, Calibri, Candara, Times, Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 16px;
+  font-family: Candara, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
 
   background-color: #434343;
   /* border: 1px solid blue; */  
@@ -14,7 +14,6 @@ html, body {
   display: grid;
   grid-template-rows: 20vh 10vh 70vh;
   /* row-gap: 10px; */
-
   align-content: center;
 
   grid-template-areas: 
@@ -62,13 +61,11 @@ html, body {
   color: #fff;
 
   line-height: 2em;
-  letter-spacing: .5px;
-  word-spacing: 3px;
+  letter-spacing: 0px;
+  word-spacing: 2px;
 
   /* border: 2px solid red; */
 }
-
-
 
 
 .Menu {

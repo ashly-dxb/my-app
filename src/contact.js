@@ -4,7 +4,7 @@ class WorkExperience extends Component {
     render() {
       return (
               <div className="ContentData">
-                    <h4>Contact Me</h4>
+                    <h3>Contact Me</h3>
 
                     <div className="ContentInside">
                         <div className="row">
@@ -19,7 +19,7 @@ class WorkExperience extends Component {
 
                         <div className="row">
                           <div className="leftList">LinkedIn</div>
-                          <div className="rightList"><a className="custLink" target="blank" href="https://linkedin.com/in/ashly-thomas-abraham">https://linkedin.com/in/ashly-thomas-abraham</a></div>
+                          <div className="rightList"><a className="custLink" target="blank" href="https://linkedin.com/in/ashly1">https://linkedin.com/in/ashly1</a></div>
                         </div>
                     </div>
               </div>

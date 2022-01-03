@@ -4,7 +4,7 @@ class PersonalSkills extends Component {
     render() {
       return (
               <div className="ContentData">
-                    <h4>Personal Skills</h4>
+                    <h3>Personal Skills</h3>
                     
                     <div className="ContentInside">
                         <div className="row">
