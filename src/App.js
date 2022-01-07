@@ -15,8 +15,13 @@ import WorkExperience 		from './workexperience';
 import Education 			from './education';
 import Contact 				from './contact';
 
+import Nav from "./components/nav";
 
 import myPhoto from "./photo.png";
+
+
+import * as d3 from "d3";
+
 
 // const HomePage = () => <h1>Home</h1>;
 
@@ -38,6 +43,23 @@ class App extends Component {
 		];
 	}
 
+	componentDidMount() {
+		// d3.select("body").transition().style("background-color", "blue");
+		// d3.selectAll(".ContentInside").style("color", "red");
+
+		// var t = d3.transition().duration(6000);
+
+		// d3.select("body")
+		// .transition(t)
+		// .style("background-color", "orange");
+
+		// d3.select("body")
+		// .transition()
+		// .delay(4000)
+		// // .each("start", function() { d3.select(this).style("background-color", "green"); })
+		// .style("background-color", "red");
+	}
+
 	clickHandler(selectedItem) {
 		this.setState({selectedMenu: selectedItem});
 	}
@@ -48,7 +70,6 @@ class App extends Component {
 			var selectionClass = "Menu";
 			if(this.state.selectedMenu === eachItem.id) {
 				selectionClass = "SelectedMenu";
-				// console.log("selection", this.state.selectedMenu);
 			}
 
 			return <Link key={index} id={eachItem.id} onClick={this.clickHandler.bind(this, eachItem.id)} className={selectionClass} to={eachItem.route}>{eachItem.name}</Link>
@@ -64,7 +85,6 @@ class App extends Component {
 					<Router basename='/profile'>
 
 						<div className="App-header">
-
 							<div className="headerLeft"><img src={myPhoto} width="100" border="0" alt="photo" /></div>
 
 							<div className="headerRight">
@@ -74,9 +94,11 @@ class App extends Component {
 						</div>
 
 						<div className="App-navigation">
-							{
-								this.getMenuLinks()
-							}
+							<Nav>
+								{/* {
+									this.getMenuLinks()
+								} */}
+							</Nav>
 						</div>
 
 						<div className="App-content">
