@@ -20,25 +20,25 @@ class PersonalProfile extends Component {
     
     render() {
       return (
-            <div className="ContentData">
-                <h2>About Me</h2>
+        <div className="ContentData">
+            <h3>About Me</h3>
 
-                <div className="ContentInside">
-                  <p>I am a full stack developer with holistic knowledge of project architecture, project life cycle and designs. I have 17+ years of working experience in the software industry as a Full Stack Developer.</p>
-                  <p>&#160;</p>
-                  <p>
-                  I am very passionate in responsive web designs and user experience. Well experienced in coordinating with the product management and stake holders. I have very good analytical and trouble shooting skills. I am an enthusiastic, self-motivated, reliable, responsible, dedicated and hardworking person. I am very punctual and motivated individual who is able to work in a busy environment and produce high standards of work. I am an excellent team worker and able to take instructions from all levels and build up good working relationships with all colleagues.
-                  </p>
-                </div>
-
-                {/* <div class="d3_fruit"></div>
-
-                <ul id="list">
-                  <li></li>
-                  <li></li>
-                </ul> */}
+            <div className="ContentInside">
+              <p>I am a full stack developer with holistic knowledge of project architecture, project life cycle and designs. I have 17+ years of working experience in the software industry as a Full Stack Developer.</p>
+              <p>&#160;</p>
+              <p>
+              I am very passionate in responsive web designs and user experience. Well experienced in coordinating with the product management and stake holders. I have very good analytical and trouble shooting skills. I am an enthusiastic, self-motivated, reliable, responsible, dedicated and hardworking person. I am very punctual and motivated individual who is able to work in a busy environment and produce high standards of work. I am an excellent team worker and able to take instructions from all levels and build up good working relationships with all colleagues.
+              </p>
             </div>
-          );
+
+            {/* <div class="d3_fruit"></div>
+
+            <ul id="list">
+              <li></li>
+              <li></li>
+            </ul> */}
+        </div>
+      );
     }
 }
   

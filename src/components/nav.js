@@ -223,9 +223,9 @@ class Nav extends Component {
 
     this.menuItems = [
 			{id: "about-me", name: "About Me", route: "/about-me"},
-			{id: "personal_skills", name: "Personal Skills", route: "/personal_skills"},
-			{id: "professional_skills", name: "Professional Skills", route: "/professional_skills" },
-			{id: "work_experience", name: "Work Experience", route: "/work_experience"},
+			{id: "pers-skills", name: "Personal Skills", route: "/pers-skills"},
+			{id: "prof-skills", name: "Professional Skills", route: "/prof-skills" },
+			{id: "work-exp", name: "Work Experience", route: "/work-exp"},
 			{id: "education", name: "Educational History", route: "/education"},
 			{id: "contact", name: "Contact Me", route: "/contact"}
 		];

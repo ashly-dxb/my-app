@@ -35,9 +35,9 @@ class App extends Component {
 
 		this.menuItems = [
 			{id: "about-me", name: "Personal Profile", route: "/about-me"},
-			{id: "personal_skills", name: "Personal Skills", route: "/personal_skills"},
-			{id: "professional_skills", name: "Professional Skills", route: "/professional_skills" },
-			{id: "work_experience", name: "Work Experience", route: "/work_experience"},
+			{id: "pers-skills", name: "Personal Skills", route: "/pers-skills"},
+			{id: "prof-skills", name: "Professional Skills", route: "/prof-skills" },
+			{id: "work-exp", name: "Work Experience", route: "/work-exp"},
 			{id: "education", name: "Educational History", route: "/education"},
 			{id: "contact", name: "Contact Me", route: "/contact"}
 		];
@@ -105,9 +105,9 @@ class App extends Component {
 							<Switch>
 								<Route exact path="/" component={PersonalProfile} />
 								<Route path="/about-me" component={PersonalProfile} />
-								<Route path="/personal_skills" component={PersonalSkills} />
-								<Route path="/professional_skills" component={ProfessionalSkills} />
-								<Route path="/work_experience" component={WorkExperience} />
+								<Route path="/pers-skills" component={PersonalSkills} />
+								<Route path="/prof-skills" component={ProfessionalSkills} />
+								<Route path="/work-exp" component={WorkExperience} />
 								<Route path="/education" component={Education} />
 								<Route path="/contact" component={Contact} />
 							</Switch>
