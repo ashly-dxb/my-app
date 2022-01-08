@@ -89,6 +89,7 @@ class App extends Component {
 
 							<div className="headerRight">
 								<h1>ASHLY THOMAS ABRAHAM</h1>
+								<div>&#160;</div>
 								<h3>Full Stack Developer</h3>
 							</div>						
 						</div>
