@@ -30,11 +30,11 @@ class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			selectedMenu : 'personal_profile'
+			selectedMenu : 'about-me'
 		};
 
 		this.menuItems = [
-			{id: "personal_profile", name: "Personal Profile", route: "/personal"},
+			{id: "about-me", name: "Personal Profile", route: "/about-me"},
 			{id: "personal_skills", name: "Personal Skills", route: "/personal_skills"},
 			{id: "professional_skills", name: "Professional Skills", route: "/professional_skills" },
 			{id: "work_experience", name: "Work Experience", route: "/work_experience"},
@@ -64,17 +64,17 @@ class App extends Component {
 		this.setState({selectedMenu: selectedItem});
 	}
 
-	getMenuLinks() {
-		return this.menuItems.map((eachItem, index) => {
+	// getMenuLinks() {
+	// 	return this.menuItems.map((eachItem, index) => {
 
-			var selectionClass = "Menu";
-			if(this.state.selectedMenu === eachItem.id) {
-				selectionClass = "SelectedMenu";
-			}
+	// 		var selectionClass = "NormalMenu";
+	// 		if(this.state.selectedMenu === eachItem.id) {
+	// 			selectionClass = "SelectedMenu";
+	// 		}
 
-			return <Link key={index} id={eachItem.id} onClick={this.clickHandler.bind(this, eachItem.id)} className={selectionClass} to={eachItem.route}>{eachItem.name}</Link>
-		});
-	}
+	// 		return <Link key={index} id={eachItem.id} onClick={this.clickHandler.bind(this, eachItem.id)} className={selectionClass} to={eachItem.route}>{eachItem.name}</Link>
+	// 	});
+	// }
 
 	render() {
 		// console.log("RENDER : ", process.env.PUBLIC_URL);
@@ -104,7 +104,7 @@ class App extends Component {
 						<div className="App-content">
 							<Switch>
 								<Route exact path="/" component={PersonalProfile} />
-								<Route path="/personal" component={PersonalProfile} />
+								<Route path="/about-me" component={PersonalProfile} />
 								<Route path="/personal_skills" component={PersonalSkills} />
 								<Route path="/professional_skills" component={ProfessionalSkills} />
 								<Route path="/work_experience" component={WorkExperience} />

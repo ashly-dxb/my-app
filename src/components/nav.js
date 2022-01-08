@@ -1,24 +1,21 @@
 import React, { Component } from "react";
-import { NavLink, Link } from "react-router-dom";
-
-// import { BurgerIcon } from './'
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const Navigation = styled.header`
   width: 100%;
-  // border-bottom: 10px solid green;
-  // z-index: 1;
+  z-index: 1;
   display: flex;
   // justify-content: space-between;
   // align-items: center;
-  height: 140px;
-
+  // height: 80px;
+  // border-bottom: 10px solid green;
   // padding: 0px 100px 0;
   // margin-bottom: 60px;
   // background: yellow;
   
   margin : auto 0;
-  padding: 10px 20px;
+  // padding: 10px 20px;
   background-color: #222;
   color: white;
 
@@ -78,12 +75,10 @@ const Navigation = styled.header`
   nav {
     ul {
       display: flex;
-      // justify-content: space-between;
     }
 
     li {
       margin: 0 12px;
-      // justify-content: space-between;
       font-size: 1em;
     }
 
@@ -100,31 +95,67 @@ const Navigation = styled.header`
     }
   }
 
-  @media only screen and (max-width: 800px) {
-    padding: 0px;
+  @media only screen and (max-width: 1100px) {
 
-    // .logo {
-    //   padding-left: 15px;
-    //   padding-top: 0px !important;
-    // }
+    nav {
+      ul {
+        display: flex;
+      }
+  
+      li {
+        margin: 0 6px;
+        font-size: 0.8em;
+        // border: 1px solid blue;
+      }
+  
+      a {
+        font-size: 1em;
+        text-decoration: none;
+        .active {
+          color: green;
+        }
+      }
+  
+      a.active {
+        color: red;
+      }
+    }
+
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 890px) {
+
+    nav {
+      ul {
+        display: flex;
+      }
+  
+      li {
+        margin: 0 3px;
+        font-size: 0.7em;
+        // border: 1px solid red;
+      }
+  
+      a {
+        font-size: 1em;
+        text-decoration: none;
+        .active {
+          color: green;
+        }
+      }
+  
+      a.active {
+        color: red;
+      }
+    }
+
+  }
+
+  @media only screen and (max-width: 576px) {
     height: auto;
     min-height: 50px;
     display: block;
     position: relative;
-
-    // .logo {
-    //   width: 100%;
-    //   display: block;
-    //   padding-top: 20px;
-    //   margin: 0px;
-    //   margin-left: -5px;
-    //   a {
-    //     padding: 20px 0px;
-    //   }
-    // }
 
     .fa-bars {
       display: inline-block;
@@ -135,7 +166,7 @@ const Navigation = styled.header`
     }
 
     ul.collapsed {
-      width: 100%;
+      width: 90%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -143,10 +174,11 @@ const Navigation = styled.header`
 
       overflow: hidden;
       max-height: 0;
-      -moz-transition-duration: 0.4s;
-      -webkit-transition-duration: 0.4s;
-      -o-transition-duration: 0.4s;
-      transition-duration: 0.4s;
+
+      -moz-transition-duration: 0.1s;
+      -webkit-transition-duration: 0.1s;
+      -o-transition-duration: 0.1s;
+      transition-duration: 0.1s;
       -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
       -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
       -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
@@ -155,10 +187,11 @@ const Navigation = styled.header`
       &.is-expanded {
         overflow: hidden;
         max-height: 500px; /* approximate max height */
-        -moz-transition-duration: 0.4s;
-        -webkit-transition-duration: 0.4s;
-        -o-transition-duration: 0.4s;
-        transition-duration: 0.4s;
+
+        -moz-transition-duration: 0.1s;
+        -webkit-transition-duration: 0.1s;
+        -o-transition-duration: 0.1s;
+        transition-duration: 0.1s;
         -moz-transition-timing-function: ease-in;
         -webkit-transition-timing-function: ease-in;
         -o-transition-timing-function: ease-in;
@@ -168,7 +201,9 @@ const Navigation = styled.header`
       li {
         padding: 15px 10px;
         margin: 0px 0px;
-        width: 70%;
+        // width: 70%;
+
+        font-size: 0.9em;
       }
     }
   }
@@ -183,11 +218,11 @@ class Nav extends Component {
 
     this.state = {
       isExpanded: false,
-      selectedMenu : 'personal_profile'
+      selectedMenu : 'about-me'
     };
 
     this.menuItems = [
-			{id: "personal_profile", name: "Personal Profile", route: "/personal"},
+			{id: "about-me", name: "About Me", route: "/about-me"},
 			{id: "personal_skills", name: "Personal Skills", route: "/personal_skills"},
 			{id: "professional_skills", name: "Professional Skills", route: "/professional_skills" },
 			{id: "work_experience", name: "Work Experience", route: "/work_experience"},
@@ -214,18 +249,15 @@ class Nav extends Component {
     // alert("selected ::"+selectedItem);
 	}
 
-
   getMenuLinks2() {
       return this.menuItems.map((eachItem, index) => {
 
-        // var selectionClass = "Menu";
-        var selectionClass = "Menu";
+        var selectionClass = "NormalMenu";
         if(this.state.selectedMenu === eachItem.id) {
           selectionClass = "SelectedMenu";
-          // console.log("selection", this.state.selectedMenu);
         }
 
-        return <NavLink key={index} id={eachItem.id} activeClassName="SelectedMenu" to={eachItem.route} onClick={this.clickHandler.bind(this, eachItem.id)} ><li>{eachItem.name}</li></NavLink>
+        return <NavLink key={index} id={eachItem.id} className={selectionClass} activeClassName="SelectedMenu" to={eachItem.route} onClick={this.clickHandler.bind(this, eachItem.id)}><li>{eachItem.name}</li></NavLink>
 
         // return <Link key={index} id={eachItem.id} onClick={this.clickHandler.bind(this, eachItem.id)} className={selectionClass} to={eachItem.route}>{eachItem.name}</Link>
       });
@@ -252,26 +284,6 @@ class Nav extends Component {
           <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
 
             {this.getMenuLinks2()}
-            
-            {/* <NavLink activeClassName="active" to="/personal">
-              <li>personal profile</li>
-            </NavLink>
-
-            <NavLink activeClassName="active" to="/personal_skills">
-              <li>personal skills</li>
-            </NavLink>
-
-            <NavLink activeClassName="active" to="/work_experience">
-              <li>work experience</li>
-            </NavLink>
-
-            <NavLink activeClassName="active" to="/education">
-              <li>education</li>
-            </NavLink>
-
-            <NavLink activeClassName="active" to="/contact">
-              <li>contact</li>
-            </NavLink> */}
 
           </ul>
         </nav>

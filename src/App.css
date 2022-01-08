@@ -2,27 +2,17 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: Candara, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Poppins, Candara, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 100%;
 
   background-color: #434343;
   /* border: 1px solid blue; */  
 }
 
-@media (min-width: 640px) {
-  body {font-size: 1rem;}
-}
-@media (min-width: 960px) {
-  body {font-size: 1.1rem;}
-}
-@media (min-width: 1100px) {
-  body {font-size: 1.3rem;}
-}
-
 .App {
-  text-align: center;
+  /* text-align: center; */
   display: grid;
-  grid-template-rows: 20vh 10vh 70vh;
+  grid-template-rows: 20vh 10vh minmax(70vh, auto);
   /* row-gap: 10px; */
   align-content: center;
 
@@ -30,34 +20,32 @@ html, body {
                       "header"
                       "navigation"
                       "content";
-
-  /* border: 2px solid blue; */
 }
 
 .App-header {
   grid-area: header;
   background-color: #434343;
   color: white;  
-  /* border: 2px solid green; */
 
-  text-align: center;
+  text-align: left;
   margin: 5px auto;
 }
 
 .headerLeft {
-    width: 200px;
+    width: 150px;
     float: left;
 }
 
 .headerRight {
-    width: calc(100% - 200px);
-    float: left;
+    width: calc(100% - 150px);
+    float: right;
 }
 
 .App-navigation {
   grid-area: navigation;
   margin : auto 0;
   padding: 10px 20px;
+  
   background-color: #222;
   color: white;
 
@@ -77,7 +65,7 @@ html, body {
   /* border: 2px solid red; */
 }
 
-.Menu {
+.NormalMenu {
   margin: 10px;
   padding: 6px 12px;
 
@@ -91,7 +79,7 @@ html, body {
 }
 
 .SelectedMenu {
-  margin: 10px;
+  margin: auto 10px;
   padding: 6px 12px;
 
   color: black;
@@ -99,7 +87,7 @@ html, body {
 
   text-decoration: none;
   box-sizing: border-box;
-  border-radius: 6px;
+  /* border-radius: 6px; */
 }
 
 .Menu:hover {
@@ -113,41 +101,46 @@ html, body {
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  /* padding: 0; */
-  margin: 6px 0;
+
+
+
+
+@media only screen and (max-width: 2000px) {
+  body {font-size: 1.2rem; }
 }
 
-h4 {
-  margin-top: 20px;
+@media only screen and (max-width: 768px) {
+  body {font-size: 1.1rem; }
+}
+
+@media only screen and (max-width: 576px) {
+  body {font-size: 1rem; }
 }
 
 .ContentData {
-  margin: 0 100px;
+  margin: 0 80px;
   text-align: left;
-
-  /* border: 1px solid red; */
 }
+
+@media only screen and (max-width: 768px) {
+
+  .ContentData {
+    margin: 0 30px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+
+  .ContentData {
+    margin: 0 20px;
+  }
+}
+
 
 .ContentInside {
   margin-top: 20px;
   text-align: left;
-
-  /* border: 1px solid red; */
 }
-
-/* .row {
-  display: flex;
-  width: 100%;
-} */
-
-/* .leftList {
-  flex: 40%;
-}
-
-.rightList {
-  flex: 60%;
-} */
 
 a.custLink {
   color: white;
@@ -171,40 +164,46 @@ a.custLink:active {
 
 
 /* ///////////////////////////// */
-
-
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
 
-/* img, object {
-  display: block;
-  border: 0;
-  max-width: 100%;
-  height: auto;
-} */
-
-/* * {
-  -moz-box-sizing: border-box;
-  -webkit-kit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-} */
-
-/* body {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.3rem;
-  background: #fefefe;
-} */
-
-/* .container {
-  width: 80%;
-  margin: 60px auto;
-} */
-
-/* h1 {
-  font-size: 3em;
+h1 {
+  font-size: 2em;
   font-weight: 600;
-} */
+}
+
+h2 {
+  font-size: 1.7em;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 1.3em;
+  font-weight: 370;
+}
+
+h5 {
+  font-size: 1.1em;
+  font-weight: 300;
+}
+
+h6 {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 6px 0;
+}
+
+h4 {
+  margin-top: 20px;
+  /* border: 1px solid green; */
+}

@@ -28,8 +28,13 @@ class PersonalSkills extends Component {
                         </div>
 
                         <div className="row">
+                          <div className="leftList col-sm-6">Designs</div>
+                          <div className="rightList col-sm-6">&#8226; &#8226; &#8226; <span style={{color: 'grey'}}>&#8226; &#8226;</span></div>
+                        </div>
+
+                        <div className="row">
                           <div className="leftList col-sm-6">Staff training</div>
-                          <div className="rightList col-sm-6">&#8226; &#8226; &#8226; &#8226; <span color="grey">&#8226;</span></div>
+                          <div className="rightList col-sm-6">&#8226; &#8226; &#8226; &#8226; <span style={{color: 'grey'}}>&#8226;</span></div>
                         </div>
 
                         <div className="row">

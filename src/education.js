@@ -7,14 +7,14 @@ class Education extends Component {
             <h3>Educational History</h3>
             
             <div className="ContentInside">
-                <h5>Mahatma Gandhi University, Kottayam</h5>
+                <h4>Mahatma Gandhi University, Kottayam</h4>
                 <h5>Bachelor of Science | Jul 1997 - Mar 2000</h5>
-                <h5>Studied Mathematics</h5>
+                <h6>Studied Mathematics</h6>
                 <br />
 
-                <h5>ET & T Computer Education, Chengannur</h5>
+                <h4>ET & T Computer Education, Chengannur</h4>
                 <h5>Advanced Diploma in Computer Software Technology | Aug 2000 - Dec 2001</h5>
-                <h5>Studied programming languages: C, C++, Visual Basic, Java, and Oracle</h5>
+                <h6>Studied programming languages: C, C++, Visual Basic, Java, and Oracle</h6>
             </div>
         </div>
       );
