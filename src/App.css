@@ -205,5 +205,39 @@ h1, h2, h3, h4, h5, h6 {
 
 h4 {
   margin-top: 20px;
-  /* border: 1px solid green; */
+}
+
+
+@media only screen and (max-width: 576px) {
+
+  h1 {
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+  
+  h2 {
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+  
+  h3 {
+    font-size: 1em;
+    font-weight: 400;
+  }
+  
+  h4 {
+    font-size: .9em;
+    font-weight: 370;
+  }
+  
+  h5 {
+    font-size: .8em;
+    font-weight: 300;
+  }
+  
+  h6 {
+    font-size: .7em;
+    font-weight: 300;
+  }
+
 }
