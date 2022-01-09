@@ -19,53 +19,6 @@ const Navigation = styled.header`
   background-color: #222;
   color: white;
 
-  .logo a {
-    // padding-top: 33px;
-    // display: flex;
-    // flex-direction: column;
-    // clear: both;
-    // padding-bottom: 30px;
-    // text-decoration: none;
-
-    // p {
-    //   width: 500px;
-    //   display: block;
-    // }
-
-    // em {
-    //   font-size: 0.5em;
-    //   float: left;
-    //   display: block;
-    //   img {
-    //     display: inline-block;
-    //     margin-top: 5px;
-    //     width: 15px;
-    //     float: left;
-    //   }
-    //   .letterhead {
-    //     display: inline-block;
-    //     line-height: 260%;
-    //     float: left;
-    //   }
-    // }
-  }
-
-  // .gray {
-  //   color: #ccc;
-  // }
-
-  // a {
-  //   color: #222;
-  //   opacity: 0.55;
-  //   transition: all 0.6s;
-  //   color: #222;
-  //   font-size: 1em;
-  // }
-
-  // a:hover {
-  //   opacity: 1;
-  // }
-
   .fa-bars {
     display: none;
     color: white;
@@ -217,8 +170,9 @@ class Nav extends Component {
     super(props);
 
     this.state = {
-      isExpanded: false,
-      selectedMenu : 'about-me'
+      isExpanded : false,
+      // selectedMenu : 'about-me'
+      selectedMenu : ''
     };
 
     this.menuItems = [
