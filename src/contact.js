@@ -9,7 +9,7 @@ class WorkExperience extends Component {
           <div className="ContentInside container">
             <div className="row">
               <div className="leftList col-sm-6">Mobile</div>
-              <div className="rightList col-sm-6">+971 - 50 857 0803</div>
+              <div className="rightList col-sm-6"><a href="tel:+971508570803">+971-50 857 0803</a></div>
             </div>
 
             <div className="row">
