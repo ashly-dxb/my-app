@@ -156,6 +156,23 @@ html, body {
   }
 }
 
+@media only screen and (max-width: 720px) {
+
+  .ContentData {
+    margin: 0 30px;
+  }
+
+  .App {
+    grid-template-rows: 37vh 20vh minmax(43vh, auto);
+  }
+
+  .NormalMenu {
+    margin: 3px;
+    padding: 6px 3px;
+    /* border: 1px solid blue; */
+  }
+}
+
 @media only screen and (max-width: 670px) {
 
   .ContentData {
