@@ -104,6 +104,41 @@ const Navigation = styled.header`
 
   }
 
+  @media only screen and (max-width: 670px) {
+
+    // height: auto;
+    // min-height: 50px;
+    // display: block;
+    position: relative;
+
+    // border: 1px solid green;
+
+    nav {
+      ul {
+        display: flex;
+      }
+  
+      li {
+        margin: 0 3px;
+        font-size: 0.7em;
+        // border: 1px solid red;
+      }
+  
+      a {
+        // font-size: 1em;
+        text-decoration: none;
+        .active {
+          color: green;
+        }
+      }
+  
+      a.active {
+        color: red;
+      }
+    }
+
+  }
+
   @media only screen and (max-width: 576px) {
     height: auto;
     min-height: 50px;
@@ -195,12 +230,9 @@ class Nav extends Component {
   clickHandler(selectedItem) {
 		this.setState({selectedMenu: selectedItem});
 
-
     this.setState({
       isExpanded: false
     });
-
-    // alert("selected ::"+selectedItem);
 	}
 
   getMenuLinks2() {
@@ -224,7 +256,7 @@ class Nav extends Component {
       <Navigation>
         {/* <div className="logo">
           <Link to="/">
-            <p>ASHLY</p>
+            <p>ZZZZZZZZZZZ</p>
           </Link>
         </div> */}
 

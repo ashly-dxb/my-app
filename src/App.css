@@ -29,6 +29,8 @@ html, body {
 
   text-align: left;
   margin: 5px auto;
+
+  /* border: 2px solid cyan; */
 }
 
 .headerLeft {
@@ -75,7 +77,7 @@ html, body {
   box-sizing: border-box;
   border-radius: 6px;
 
-  /* border: 1px solid red; */
+  /* border: 1px solid purple; */
 }
 
 .SelectedMenu {
@@ -90,11 +92,11 @@ html, body {
   /* border-radius: 6px; */
 }
 
-.Menu:hover {
+.NormalMenu:hover {
   margin: 10px;
   padding: 6px 12px;
 
-  color: green;
+  color: lightblue;
   background-color: #aaa;
 
   text-decoration: none;
@@ -115,15 +117,59 @@ html, body {
   body {font-size: .8em; }
 }
 
+
+
 .ContentData {
   margin: 0 80px;
   text-align: left;
+}
+
+@media only screen and (max-width: 825px) {
+
+  .ContentData {
+    margin: 0 30px;
+  }
+
+  .App {
+    grid-template-rows: 24vh 20vh minmax(56vh, auto);
+  }
+
+  .NormalMenu {
+    margin: 6px;
+    padding: 6px 10px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
 
   .ContentData {
     margin: 0 30px;
+  }
+
+  .App {
+    grid-template-rows: 24vh 20vh minmax(56vh, auto);
+  }
+
+  .NormalMenu {
+    margin: 5px;
+    padding: 6px 6px;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+
+  .ContentData {
+    margin: 0 30px;
+    /* border: 1px solid yellow; */
+  }
+
+  .App {
+    grid-template-rows: 32vh 24vh minmax(46vh, auto);
+  }
+
+  .NormalMenu {
+    margin: 3px;
+    padding: 6px 2px;
   }
 }
 
@@ -135,6 +181,16 @@ html, body {
 
   .App {
     grid-template-rows: 18vh 10vh minmax(78vh, auto);
+  }
+
+  .headerLeft {
+      width: 120px;
+      float: left;
+  }
+
+  .headerRight {
+      width: calc(100% - 120px);
+      float: right;
   }
 }
 
