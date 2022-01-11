@@ -6,23 +6,23 @@ const Navigation = styled.header`
   width: 100%;
   z-index: 1;
   display: flex;
-  // justify-content: space-between;
-  // align-items: center;
-  // height: 80px;
-  // border-bottom: 10px solid green;
-  // padding: 0px 100px 0;
-  // margin-bottom: 60px;
-  // background: yellow;
-  
-  margin : auto 0;
+  // border: 1px solid green;
+ 
+  margin : auto;
   // padding: 10px 20px;
-  background-color: #222;
+  background-color: #191919;
   color: white;
 
   .fa-bars {
     display: none;
     color: white;
-    font-size: 2rem;
+    font-size: 1.7rem;
+  }
+
+  .fa-close {
+    display: none;
+    color: white;
+    font-size: 1.7rem;
   }
 
   nav {
@@ -228,9 +228,8 @@ class Nav extends Component {
   }
 
   clickHandler(selectedItem) {
-		this.setState({selectedMenu: selectedItem});
-
-    this.setState({
+		this.setState({
+      selectedMenu: selectedItem,
       isExpanded: false
     });
 	}
@@ -254,18 +253,15 @@ class Nav extends Component {
 
     return (
       <Navigation>
-        {/* <div className="logo">
-          <Link to="/">
-            <p>ZZZZZZZZZZZ</p>
-          </Link>
-        </div> */}
-
         <nav className="nav">
           <i
             className="fa fa-bars"
             aria-hidden="true"
             onClick={e => this.handleToggle(e)}
           />
+
+          {/* <i id="bars" aria-hidden="true" className="fa fa-bars fa-fw" onClick={e => this.handleToggle(e)}></i>
+          <i id="cross" aria-hidden="true" className="fa fa-times fa-fw" onClick={e => this.handleToggle(e)}></i> */}
 
           <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
 
