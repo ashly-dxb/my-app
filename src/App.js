@@ -16,14 +16,9 @@ import Education 			from './education';
 import Contact 				from './contact';
 
 import Nav from "./components/nav";
-
-import myPhoto from "./photo.png";
-
-
+// import myPhoto from "./photo.png";
+import myPhoto2 from "./photo2.jpeg";
 import * as d3 from "d3";
-
-
-// const HomePage = () => <h1>Home</h1>;
 
 class App extends Component {
 
@@ -85,12 +80,12 @@ class App extends Component {
 					<Router basename='/profile'>
 
 						<div className="App-header">
-							<div className="headerLeft"><img src={myPhoto} width="100" border="0" alt="photo" /></div>
+							<div className="headerLeft"><img src={myPhoto2} width="100" border="0" alt="photo" /></div>
 
 							<div className="headerRight">
 								<h1>ASHLY THOMAS ABRAHAM</h1>
 								<div>&#160;</div>
-								<h3>Full Stack Developer</h3>
+								<h3>Full-Stack Developer</h3>
 							</div>						
 						</div>
 
